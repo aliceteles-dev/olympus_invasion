@@ -1,0 +1,29 @@
+LISTA DE TAREFAS
+
+> ajustar colisão do player - FEITO
+> importar o tileset que fiz - FEITO
+> programar a vida do player e um sistema de danos
+> fazer sprite da vida pra ficar na UI
+> criar a sprite do cachorro
+> criar a sprite do player atacando (ou não, da pra fazer ele apenas atirar)
+> criar sprites do player atirando
+> criar o primeiro level
+> ajustar a velocidade e altura do pulo do player
+> não deixar o player sair da room pelo x
+> fazer ele tomar dano e voltar a um checkpoint se cair em um buraco
+
+Inimigos:
+> criar a sprite do rato
+> criar a sprite do cara armado
+> criar a sprite da medusa
+> criar a sprite do eros
+
+Cenário:
+> criar um background pro primeiro tileset
+> criar um tileset pro monte olimpo
+
+
+Opcionais (se der tempo):
+> criar um tileset de transição pro level 2
+> mostrar em vez de contar a história do menino e seu cachorro (cutscene)
+

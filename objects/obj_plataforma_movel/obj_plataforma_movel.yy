@@ -35,8 +35,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_testes",
-    "path":"sprites/spr_testes/spr_testes.yy",
+    "name":"spr_plataforma_movel1",
+    "path":"sprites/spr_plataforma_movel1/spr_plataforma_movel1.yy",
   },
   "spriteMaskId":null,
   "visible":true,

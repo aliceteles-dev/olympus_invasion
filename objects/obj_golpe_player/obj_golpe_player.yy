@@ -1,12 +1,13 @@
 {
   "$GMObject":"",
-  "%Name":"obj_rato",
+  "%Name":"obj_golpe_player",
   "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":7,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
-    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":{"name":"obj_rato","path":"objects/obj_rato/obj_rato.yy",},"eventNum":0,"eventType":4,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_rato",
+  "name":"obj_golpe_player",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -31,8 +32,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_rato_ataque",
-    "path":"sprites/spr_rato_ataque/spr_rato_ataque.yy",
+    "name":"spr_golpe",
+    "path":"sprites/spr_golpe/spr_golpe.yy",
   },
   "spriteMaskId":null,
   "visible":true,
