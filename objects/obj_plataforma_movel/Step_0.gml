@@ -1,0 +1,2 @@
+movimento();
+leva_player();
