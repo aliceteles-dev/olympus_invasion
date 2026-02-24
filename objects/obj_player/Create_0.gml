@@ -4,10 +4,16 @@ keyboard_set_map(ord("D"), vk_right);
 
 
 #region Variáveis 
+vida = 3;
+
+//invencibilidade do player após tomar dano
+tempo_inv = game_get_speed(gamespeed_fps);
+timer_inv = 2;
+
 
 //definindo com qwem o player vai colidir
 var _tile = layer_tilemap_get_id("tl_cidade");
-solidos = [obj_parede, obj_plataforma_movel, _tile];
+solidos = [obj_parede, obj_plataforma_movel, obj_plataforma_vertical, _tile];
 
 //quem o player pode acertar?
 inimigos = [obj_rato];
@@ -15,9 +21,10 @@ inimigos = [obj_rato];
 //controle
 estou_no_chao       = false;
 estou_na_plat_movel = false;
-atacando = false;
-atirei = false;
-direcao = 0; //essa aq decide pra onde o golpe do player vai 
+atacando            = false;
+atirei              = false;
+direcao             = 0; //essa aq decide pra onde o golpe do player vai 
+pulei               = false;
 
 //movimento
 velh = 0;
@@ -48,9 +55,27 @@ inputs_player = function()
     golpe       = keyboard_check_pressed(ord("F"));
 }
 
+//tentando controlar o pulo do player
+//checando_se_pulei = function()
+//{
+    //var _jump_cooldown = game_get_speed(gamespeed_fps) * 200
+    //if (pular)
+    //{
+        //pulei = true * _jump_cooldown;
+        //
+    //}
+    //else 
+    //{
+    	//pulei = false;
+    //}
+//}
+//deu errado
+
 
 movimento = function()
 {
+    timer_inv--; 
+    
     //lo´gica do movimento horizontal
     velh = (direita - esquerda) * max_velh;
     
@@ -64,18 +89,37 @@ movimento = function()
     
     //também quero que o player colida com a plataforma móvel
     //move_and_collide(0, 0, obj_plataforma_movel, 12);
+    //checando_se_pulei();
+   
+    
+    
+     if (place_meeting(x, y + velv, solidos))
+    {
+        while (!place_meeting(x, y + sign(velv), solidos))
+        {
+            y += sign(velv);
+        }
+    
+        if (velv > 0)  // só quando está caindo
+        {
+            velv = 0;
+        }
+}
     
     if (!estou_no_chao)
     {
         velv += g;
-    }
-    else 
-    {
-        velv = 0;
-        velv -= pular * max_velv;	
-        y = round(y);
+        //pulei = true;
     }
     
+    
+    y = clamp(y, 0 + sprite_height, room_height + 100);
+    //else if (estou_no_chao)
+    //{
+        //velv = 0;
+    //}
+
+     //pulei = false;
     //if (estou_na_plat_movel)
     //{
         //velv = 0;
@@ -83,34 +127,105 @@ movimento = function()
     //}
 }
 
+//sera que se eu usar a bbox_bottom do player mais top da plataforma isso faria a plataforma funcionar melhor
+pulando = function()
+{
+    if (estou_no_chao and pular and !pulei)
+    {
+        //velv -= pular * max_velv;
+       // y = round(y);
+        //pulei = false;
+        velv -= max_velv;
+        pulei = true;
+    }
+
+    if (!pular)
+    {
+        pulei = false;
+    }
+    
+}
+
 tocando_chao = function()
 {
-    estou_no_chao = place_meeting(x, y + 1, solidos);
+    if (place_meeting(x, y + 1, solidos))
+    {
+        estou_no_chao = true;
+    }
+    else 
+    {
+        estou_no_chao = false;	
+    }
 }
+
+
 
 estou_na_plataforma = function()
 {
     estou_na_plat_movel = place_meeting(x, y + 1, obj_plataforma_movel);
 }
 
-lutar = function()
+
+inicia_ataque = function()
 {
-    if (golpe)
+    if(golpe)
     {
         atacando = true;
+    }    
+}
+
+perde_vida = function()
+{
+	if timer_inv > 0 return;
+	
+	if (vida > 1)
+	{
+		vida--;	
+        timer_inv = tempo_inv;
+    }
+    else
+    {
+        instance_destroy();
+    }
+
+}
+
+
+
+lutar = function()
+{
+   if (atacando)
+    {
+
+        var _local_de_saida = 0
         
-        var _particula = instance_create_layer(x + 10, y - 15, "golpe", obj_golpe_player);
+        //tentnado consertar o mal posicionamento da sprite do golpe quando ela é criada
+        if (estado == "fight_right")
+        {
+            _local_de_saida = x + 10;
+        }
+        else if (estado == "fight_left")
+        {
+            _local_de_saida = x - 10;
+        }
+        
+        //substitui x+10 por _local_de_saidaa
+        var _particula = instance_create_layer(_local_de_saida, y - 15, "golpe", obj_golpe_player);
         _particula.hspeed = 2 * direcao;
         
-        
         atacando = false;
-        //if (instance_exists(inimigos))
-        //{
-            //other.vida--;
-        //}
-        
-        //golpe = false;
+        //problema aqui, fica feio quando ele golpeia pra esquerda
+            
+            //atacando = false;
+            //if (instance_exists(inimigos))
+            //{
+                //other.vida--;
+            //}
+            
+            //golpe = false;
     }
+    
+   // atacando = false;
 }
 
 
@@ -127,6 +242,22 @@ lutar = function()
 //}
 //vamos tntar codar isso na plataforma
 
+desenha_vida = function(_guiy = (-display_get_gui_height()) + display_get_gui_height(), _guix = (-display_get_gui_height()) + display_get_gui_height())
+{
+    repeat(vida)
+    {
+       // draw_get_valign()
+       // var _guix, _guiy;
+       // _guix = (-display_get_gui_height()) + display_get_gui_height();
+       // _guiy = (-display_get_gui_width()) + display_get_gui_width();
+        draw_sprite(spr_vida, 0, _guix + 30, _guiy + 30);
+      //  draw_set_halign(fa_right) 
+        _guix += 35;
+        
+    }
+    
+    _guix += 20; 
+}
 
 #endregion
 
@@ -204,9 +335,12 @@ animacoes = function()
     
         case "right":
             
+            direcao = 1;
+            
             if (golpe)
             {
                 estado = "fight_right";
+                image_index = 0;
             }
             
             sprite_index = spr_player_right;
@@ -228,6 +362,8 @@ animacoes = function()
     
     
         case "left":
+            
+            direcao = -1;
             
             if (golpe)
             {
@@ -255,6 +391,8 @@ animacoes = function()
     
         case "jump_right":
             
+            direcao = 1;
+            
             if (golpe)
             {
                 estado = "fight_right";
@@ -277,6 +415,8 @@ animacoes = function()
     
     
         case "jump_left":
+            
+            direcao = -1;
             
             if (golpe)
             {
@@ -301,8 +441,22 @@ animacoes = function()
             
     
         case "fight_right":
+            
             sprite_index = spr_player_fight_right;
             image_speed = 1;
+            
+            lutar();
+            
+            //if (image_index >= image_number - 1)
+            //{
+                //atacando = false;
+                //image_index = 0;
+                //estado = "idle"; 
+            //}
+            //if (sprite_index == 0)
+            //{
+                //lutar();
+            //}
             //image_index += 0.25;
 
             //if (image_index >= 0)
@@ -314,7 +468,7 @@ animacoes = function()
             if (image_index > image_number - 1)
             {
                 
-                atacando = false;
+               // atacando = false;
                 
                 if (velh == 0)
                 {
@@ -333,15 +487,27 @@ animacoes = function()
     
     
         case "fight_left":
+            
+            image_speed = 1;
             sprite_index = spr_player_fight_left;
-            image_speed = 1; 
+            
+            lutar();
+            //atacando = true;
+            
+            //if(image_index <= 0)
+            //{
+                //lutar();
+                ////image_speed = 1;
+            //}
+            
+           // image_speed = 1; 
             //direcao = -1;
             //lutar();
             
             if (image_index >= image_number - 1)
             {
                 
-                atacando = false;
+               // atacando = false;
                 
                 if (velh == 0)
                 {

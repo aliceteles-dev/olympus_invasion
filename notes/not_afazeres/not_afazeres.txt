@@ -1,19 +1,21 @@
 LISTA DE TAREFAS
 
-> ajustar colisão do player - FEITO
-> importar o tileset que fiz - FEITO
-> programar a vida do player e um sistema de danos
-> fazer sprite da vida pra ficar na UI
+
+> - FEITO ajustar colisão do player     
+> - FEITOimportar o tileset que fiz    
+> - FEITO programar a vida do player e um sistema de danos
+> - FEITO fazer sprite da vida pra ficar na UI
 > criar a sprite do cachorro
-> criar a sprite do player atacando (ou não, da pra fazer ele apenas atirar)
-> criar sprites do player atirando
-> criar o primeiro level
-> ajustar a velocidade e altura do pulo do player
-> não deixar o player sair da room pelo x
+> - FEITO criar a sprite do player atacando (ou não, da pra fazer ele apenas atirar)
+> - FEITO criar sprites do player atirando
+> - FEITO criar o primeiro level
+> - FEITO ajustar a velocidade e altura do pulo do player
+> - FEITO não deixar o player sair da room pelo x
 > fazer ele tomar dano e voltar a um checkpoint se cair em um buraco
+> colocar o meme de confia do will smith no ultimo pulo do level 1
 
 Inimigos:
-> criar a sprite do rato
+> - FEITO criar a sprite do rato
 > criar a sprite do cara armado
 > criar a sprite da medusa
 > criar a sprite do eros

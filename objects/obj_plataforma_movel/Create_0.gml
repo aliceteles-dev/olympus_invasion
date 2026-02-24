@@ -24,10 +24,10 @@ movimento = function()
 leva_player = function()
 {
     with (obj_player)
-{
-    if (place_meeting(x, y + 1, other))
     {
-        x += obj_plataforma_movel.velh * obj_plataforma_movel.direcao;
+        if (place_meeting(x, y + 1, other)) 
+        {
+            x += other.velh * other.direcao;
+        }
     }
-}
 }
