@@ -1,6 +1,7 @@
 //mapeamento dos botões
 keyboard_set_map(ord("A"), vk_left);
 keyboard_set_map(ord("D"), vk_right);
+keyboard_set_map(vk_up, vk_space);
 
 
 #region Variáveis 
@@ -12,8 +13,9 @@ timer_inv = 2;
 
 
 //definindo com qwem o player vai colidir
-var _tile = layer_tilemap_get_id("tl_cidade");
-solidos = [obj_parede, obj_plataforma_movel, obj_plataforma_vertical, _tile];
+var _tile1 = layer_tilemap_get_id("tl_cidade");
+var _tile2 = layer_tilemap_get_id("tl_nuvens");
+solidos = [obj_parede, obj_plataforma_movel, obj_plataforma_vertical, _tile1, _tile2];
 
 //quem o player pode acertar?
 inimigos = [obj_rato];

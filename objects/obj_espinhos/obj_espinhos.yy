@@ -30,8 +30,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_teste_espinhos",
-    "path":"sprites/spr_teste_espinhos/spr_teste_espinhos.yy",
+    "name":"spr_espinhos",
+    "path":"sprites/spr_espinhos/spr_espinhos.yy",
   },
   "spriteMaskId":null,
   "visible":true,

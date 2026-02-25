@@ -14,6 +14,16 @@ LISTA DE TAREFAS
 > fazer ele tomar dano e voltar a um checkpoint se cair em um buraco
 > colocar o meme de confia do will smith no ultimo pulo do level 1
 
+
+Arte:
+> Bola de raios pra cair na cabeça do player
+> Animação de ataque da medusa
+> Background pro level 1
+> Background pro level 2
+
+
+
+
 Inimigos:
 > - FEITO criar a sprite do rato
 > criar a sprite do cara armado
@@ -22,7 +32,7 @@ Inimigos:
 
 Cenário:
 > criar um background pro primeiro tileset
-> criar um tileset pro monte olimpo
+> FEITO - criar um tileset pro monte olimpo
 
 
 Opcionais (se der tempo):

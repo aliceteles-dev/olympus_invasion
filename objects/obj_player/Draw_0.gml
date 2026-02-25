@@ -1,3 +1,3 @@
 draw_self();
-draw_text(x, y - 40, estado);
+//draw_text(x, y - 40, estado);
 //animacoes();

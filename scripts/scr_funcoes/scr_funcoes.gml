@@ -12,3 +12,6 @@
 
 
 global.debug = false;
+
+//definindo pra qual room eu vou
+global.room_goto = noone;

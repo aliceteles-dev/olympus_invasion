@@ -1,0 +1,43 @@
+{
+  "$GMTileSet":"v1",
+  "%Name":"ti_nuvens",
+  "autoTileSets":[
+    {"$GMAutoTileSet":"","%Name":"nuvens","closed_edge":false,"name":"nuvens","resourceType":"GMAutoTileSet","resourceVersion":"2.0","tiles":[
+        57,58,59,60,61,62,63,64,79,80,81,82,83,84,85,86,101,102,103,104,105,106,107,108,123,124,125,126,127,
+        128,129,130,145,146,147,148,149,150,151,152,167,168,169,170,171,172,173,
+      ],},
+  ],
+  "macroPageTiles":{
+    "SerialiseHeight":0,
+    "SerialiseWidth":0,
+    "TileSerialiseData":[],
+  },
+  "name":"ti_nuvens",
+  "out_columns":16,
+  "out_tilehborder":2,
+  "out_tilevborder":2,
+  "parent":{
+    "name":"Tile Sets",
+    "path":"folders/Tile Sets.yy",
+  },
+  "resourceType":"GMTileSet",
+  "resourceVersion":"2.0",
+  "spriteId":{
+    "name":"spr_tileset_nuvens",
+    "path":"sprites/spr_tileset_nuvens/spr_tileset_nuvens.yy",
+  },
+  "spriteNoExport":false,
+  "textureGroupId":{
+    "name":"Default",
+    "path":"texturegroups/Default",
+  },
+  "tileAnimationFrames":[],
+  "tileAnimationSpeed":15.0,
+  "tileHeight":16,
+  "tilehsep":0,
+  "tilevsep":0,
+  "tileWidth":16,
+  "tilexoff":0,
+  "tileyoff":0,
+  "tile_count":242,
+}
