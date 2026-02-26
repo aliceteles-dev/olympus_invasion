@@ -1,6 +1,6 @@
 //criando array para os componentes do menu
 
-menu = ["jogar", "tutorial", "idioma", "sair"]
+menu = ["Jogar", "Tutorial", "Idioma", "Sair"]
 
 atual = 0;
 
@@ -44,7 +44,7 @@ ativa_menu = function()
 	{
 		//jogar
 		case 0:
-			room_goto(rm_jogo);
+			room_goto(rm_historia);
 
 		break;
 	
@@ -75,13 +75,14 @@ draw_menu = function()
 
 
 	//alinhando
+    draw_set_halign(fa_middle);
 	draw_set_valign(fa_middle); //fa_middle = 1
 
 	//escolhendo a fonte 
 	draw_set_font(fnt_menu);
 
 	//espaçamento entre linhas
-	var _height = string_height("D");
+	var _height = string_height("D") + 15;
 
 	
 	for (var i = 0; i < array_length(menu); i++)
@@ -89,16 +90,18 @@ draw_menu = function()
 		//variáveis para destacar o texto selecionado
 		var _cor = c_white
 		var _margem = 0;
+        var meio = display_get_gui_width() - display_get_gui_width() / 2;
 	
 		//destacando o texto selecionado
 		if (atual == i)
 		{
-			_cor = c_red;
-			_margem = margem;
+			_cor = c_orange;
+			//_margem = margem;
+            
 		}
 	
 		draw_set_color(_cor);
-		draw_text(20 + _margem, _altura + i * _height, menu[i]);
+		draw_text(meio, _altura + i * _height, menu[i]);
 		//reset
 		draw_set_color(-1);
 
