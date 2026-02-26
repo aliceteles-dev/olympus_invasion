@@ -98,8 +98,8 @@
   "resourceType":"GMProject",
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
-    {"roomId":{"name":"rm_jogo2","path":"rooms/rm_jogo2/rm_jogo2.yy",},},
     {"roomId":{"name":"rm_inicio","path":"rooms/rm_inicio/rm_inicio.yy",},},
+    {"roomId":{"name":"rm_jogo2","path":"rooms/rm_jogo2/rm_jogo2.yy",},},
     {"roomId":{"name":"rm_historia","path":"rooms/rm_historia/rm_historia.yy",},},
     {"roomId":{"name":"rm_jogo1","path":"rooms/rm_jogo1/rm_jogo1.yy",},},
   ],
