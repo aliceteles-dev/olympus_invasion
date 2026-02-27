@@ -8,7 +8,7 @@
 //leave = false;
 
 //array com todos os textos: 
-texto = ["Ainda não caiu a ficha...", "Ainda não caiu a ficha... que meu melhor amigo...", "Ainda não caiu a ficha... que meu melhor amigo... se foi.", "Eu vou sentir muito a sua falta, Pingo.", "Se ao menos eu pudesse te ver uma última vez pra me despedir...", "Não acredito que eu estava no trabalho quando você partiu!", "Então você quer reencontrar seu amigo?", "O quê?? Quem é você?", "O mundo dos mortos e o mundo dos vivos não se misturam,", "mas se você se provar capaz de alcançar o mundo dos deuses, eu abrirei uma exceção.", "Vá até o Monte Olimpo!", "É lá onde a alma do seu cachorro te aguarda."];                                        
+texto = ["Ainda não caiu a ficha...", "Ainda não caiu a ficha... que meu melhor amigo...", "...se foi.", "Eu vou sentir muito a sua falta, Pingo.", "Se ao menos eu pudesse te ver uma última vez pra me despedir...", "Não acredito que eu estava no trabalho quando você partiu!", "Então você quer reencontrar seu amigo?", "O quê?? Quem é você?", "O mundo dos mortos e o mundo dos vivos não se misturam,", "mas se você se provar capaz de alcançar o mundo dos deuses, eu abrirei uma exceção.", "Vá até o Monte Olimpo!", "É lá onde a alma do seu cachorro te aguarda."];                                        
 indice_texto = 0;
 aumentar_indice = false;
 
@@ -149,7 +149,7 @@ escrevendo_texto = function()
         case 5:
             timer_escrever++;
             
-            if (timer_escrever >= tempo_texto * 5)
+            if (timer_escrever >= tempo_texto * 8)
             {
                 timer_escrever = 0;
                 estado = 6;
@@ -252,7 +252,7 @@ escrevendo_texto = function()
         break;
         
         case 12:
-            room_goto(rm_jogo1);
+           layer_sequence_create("transicao", room_width / 2, room_height / 2, sqn_transicao1);
           
         break;
         
@@ -275,7 +275,7 @@ escrevendo_texto = function()
 //deixando o player pular a introdução:
 input_pular = function()
 {
-    leave = keyboard_check(vk_escape);
+    leave = keyboard_check_pressed(vk_escape);
 }
 
 pode_pular = function()

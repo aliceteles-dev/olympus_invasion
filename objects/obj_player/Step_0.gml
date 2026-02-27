@@ -41,3 +41,10 @@ ativa_debug();
 
 //if atacando show_message("Sou true!")
 //show_debug_message(pulei)
+
+
+//reiniciar
+if (keyboard_check_pressed(ord("R")))
+{
+    room_restart();
+}

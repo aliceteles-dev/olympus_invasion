@@ -1,1 +1,4 @@
-desenha_vida();
+if (!global.transicao)
+{
+    desenha_vida();
+}

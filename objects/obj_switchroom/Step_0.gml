@@ -1,2 +1,4 @@
 pode_mudar_room();
-muda_room();
+transicao2();
+//muda_room();
+//transicao();

@@ -44,13 +44,17 @@ ativa_menu = function()
 	{
 		//jogar
 		case 0:
-			room_goto(rm_historia);
+            layer_sequence_create("transicao", room_width / 2, room_height / 2, sqn_transicao1);
+            global.leave = true;
+			global.room_goto = rm_historia;
 
 		break;
 	
 		//tutorial
 		case 1:
-			room_goto(rm_creditos);
+            layer_sequence_create("transicao", room_width / 2, room_height / 2, sqn_transicao1);
+            global.leave = true;
+			global.room_goto = rm_creditos;
 
 		break;
 	
@@ -62,6 +66,7 @@ ativa_menu = function()
 	
 		//sair
 		case 2:
+            layer_sequence_create("transicao", room_width / 2, room_height / 2, sqn_transicao1);
 			game_end();
 		
 		break;

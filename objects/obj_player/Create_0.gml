@@ -58,7 +58,7 @@ checkpoint_y = y;
 
 function cair_no_buraco()
 {
-    vida -= 1;
+    perde_vida();
 
     x = checkpoint_x;
     y = checkpoint_y;
