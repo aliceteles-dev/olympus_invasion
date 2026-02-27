@@ -25,6 +25,6 @@ function muda_room()
     if (global.leave)
     {
         room_goto(global.room_goto);
-       // global.leave = false;
+        global.leave = false;
     }
 }

@@ -48,6 +48,30 @@ estado = "idle";
 #endregion
 
 
+#region Antiqueda
+
+checkpoint_x = x;
+checkpoint_y = y;
+
+
+
+
+function cair_no_buraco()
+{
+    vida -= 1;
+
+    x = checkpoint_x;
+    y = checkpoint_y;
+
+    vspeed = 0;
+}
+
+
+
+
+#endregion
+
+
 #region Métodos
 inputs_player = function()
 {
@@ -188,6 +212,7 @@ perde_vida = function()
     else
     {
         instance_destroy();
+        room_restart();
     }
 
 }

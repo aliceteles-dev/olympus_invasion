@@ -5,7 +5,21 @@ tocando_chao();
 movimento();
 pulando();
 //inicia_ataque();
+
 animacoes();
+
+if (place_meeting(x, y + 1, solidos))
+{
+    checkpoint_x = x;
+    checkpoint_y = y;
+}
+
+if (!place_meeting(x, y + 1, solidos) && velv > 0 && y >= room_height + 32)
+{
+    cair_no_buraco();
+}
+
+
 //posso_mudar_level();
 //muda_room();
 
