@@ -4,6 +4,6 @@ pode_pular();
 transicao();
 inicia_historia();
 //proximo_texto();
-show_debug_message(estado)
-
+//show_debug_message(estado)
+//show_debug_message("Chamando transicao na room: " + room_get_name(room));
 //show_message(array_length(texto));

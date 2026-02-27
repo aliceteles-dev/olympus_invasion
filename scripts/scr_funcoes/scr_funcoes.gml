@@ -14,10 +14,15 @@ global.transicao = false;
 global.debug = false;
 
 //definindo pra qual room eu vou
-global.room_goto = rm_jogo1;
+global.room_goto = noone;
 
 //posso sair da room?
 global.leave = false;
+
+
+//lidando com o bug da room 
+global.transicao_ativa = false;
+global.proxima_room = noone;
 
 function transicao()
 {
@@ -41,7 +46,7 @@ function transicao2()
     if (global.leave and instance_exists(obj_player))
     { 
         global.leave = false;
-        layer_sequence_create("transicao", obj_player.x - 180, obj_player. y - 1002, sqn_transicao1);
+        layer_sequence_create("transicao", obj_player.x - 180, obj_player. y - 100, sqn_transicao1);
     }
 
 }
@@ -49,7 +54,7 @@ function transicao2()
 function muda_room()
 {
 
-        room_goto(global.room_goto);
+        room_goto(global.proxima_room);
         global.leave = false;
 
 }

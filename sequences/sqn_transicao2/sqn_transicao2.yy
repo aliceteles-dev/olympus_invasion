@@ -1,6 +1,6 @@
 {
   "$GMSequence":"v1",
-  "%Name":"sqn_transicao1",
+  "%Name":"sqn_transicao2",
   "autoRecord":true,
   "backdropHeight":180,
   "backdropImageOpacity":0.5,
@@ -23,19 +23,19 @@
     "Keyframes":[
       {"$Keyframe<MomentsEventKeyframe>":"","Channels":{
           "0":{"$MomentsEventKeyframe":"","Events":[
-              "muda_room",
-            ],"resourceType":"MomentsEventKeyframe","resourceVersion":"2.0",},
-        },"Disabled":false,"id":"68a2ef7f-92df-408a-987f-e3738e6654f6","IsCreationKey":false,"Key":25.0,"Length":1.0,"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
-      {"$Keyframe<MomentsEventKeyframe>":"","Channels":{
-          "0":{"$MomentsEventKeyframe":"","Events":[
               "termina_transicao",
             ],"resourceType":"MomentsEventKeyframe","resourceVersion":"2.0",},
-        },"Disabled":false,"id":"94a32298-ca0d-47a8-9aaa-f46eb5bf7b11","IsCreationKey":false,"Key":29.9999,"Length":1.0,"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
+        },"Disabled":false,"id":"87e6f8d1-00d1-4e23-b695-145ef3dc21fa","IsCreationKey":false,"Key":29.0,"Length":1.0,"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
+      {"$Keyframe<MomentsEventKeyframe>":"","Channels":{
+          "0":{"$MomentsEventKeyframe":"","Events":[
+              "muda_room",
+            ],"resourceType":"MomentsEventKeyframe","resourceVersion":"2.0",},
+        },"Disabled":false,"id":"603cbcd5-0294-4aa0-a6a0-cc94b4e37d2e","IsCreationKey":false,"Key":29.9999,"Length":1.0,"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
     ],
     "resourceType":"KeyframeStore<MomentsEventKeyframe>",
     "resourceVersion":"2.0",
   },
-  "name":"sqn_transicao1",
+  "name":"sqn_transicao2",
   "parent":{
     "name":"Sequences",
     "path":"folders/Sequences.yy",

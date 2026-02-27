@@ -287,4 +287,4 @@ pode_pular = function()
 }
 
 
-global.room_goto = rm_jogo1;
+global.proxima_room = rm_jogo1;

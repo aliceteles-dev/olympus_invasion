@@ -211,8 +211,11 @@ perde_vida = function()
     }
     else
     {
-        instance_destroy();
-        room_restart();
+        global.transicao_ativa = true;
+        room_restart()
+        global.proxima_room = obj_switchroom.destino;
+        
+        layer_sequence_create("transicao", x, y, sqn_transicao1);
     }
 
 }

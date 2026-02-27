@@ -23,7 +23,7 @@ if (!place_meeting(x, y + 1, solidos) && velv > 0 && y >= room_height + 32)
 //posso_mudar_level();
 //muda_room();
 
-show_debug_message(global.leave)
+//show_debug_message(global.leave)
 
 if (keyboard_check_pressed(ord("F")) && !atacando)
 {
@@ -46,5 +46,9 @@ ativa_debug();
 //reiniciar
 if (keyboard_check_pressed(ord("R")))
 {
-    room_restart();
+    global.transicao_ativa = true;
+    room_restart()
+    global.proxima_room = obj_switchroom.destino;
+        
+    layer_sequence_create("transicao", x, y, sqn_transicao1);
 }

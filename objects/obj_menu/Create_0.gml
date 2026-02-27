@@ -22,7 +22,7 @@ controla_menu = function()
 		margem = 0;
 	}
 
-	show_debug_message(atual);
+	//show_debug_message(atual);
 
 	atual = clamp(atual, 0, array_length(menu) - 1);
 
@@ -46,7 +46,7 @@ ativa_menu = function()
 		case 0:
             layer_sequence_create("transicao", room_width / 2, room_height / 2, sqn_transicao1);
             global.leave = true;
-			global.room_goto = rm_historia;
+			global.proxima_room = rm_historia;
 
 		break;
 	
