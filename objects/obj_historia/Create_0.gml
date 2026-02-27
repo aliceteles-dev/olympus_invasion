@@ -5,7 +5,8 @@
 
 //talvez um método pra aplicar no draw, que vai ser responsável por todo o texto
 
-leave = false;
+//leave = false;
+
 
 tempo_texto = 0;
 timer_escrever = 0;
@@ -18,10 +19,13 @@ input_pular = function()
     leave = keyboard_check(vk_escape);
 }
 
-pula_intro = function()
+pode_pular = function()
 {
     if (leave)
     {
-        room_goto(rm_jogo1);
+        global.leave = true;
     }
 }
+
+
+global.room_goto = rm_jogo1;

@@ -1,6 +1,6 @@
 //criando array para os componentes do menu
 
-menu = ["Jogar", "Tutorial", "Idioma", "Sair"]
+menu = ["Jogar", "Créditos", "Sair"]
 
 atual = 0;
 
@@ -50,18 +50,18 @@ ativa_menu = function()
 	
 		//tutorial
 		case 1:
-			room_goto(rm_tutorial);
+			room_goto(rm_creditos);
 
 		break;
 	
 		//idioma
-		case 2:
-			room_goto(rm_idioma);
-
-		break;
+		//case 2:
+			//room_goto(rm_idioma);
+//
+		//break;
 	
 		//sair
-		case 3:
+		case 2:
 			game_end();
 		
 		break;

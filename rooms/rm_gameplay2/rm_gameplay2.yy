@@ -1,15 +1,15 @@
 {
   "$GMRoom":"v1",
-  "%Name":"rm_jogo2",
-  "creationCodeFile":"",
+  "%Name":"rm_gameplay2",
+  "creationCodeFile":"rooms/rm_gameplay2/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
-    {"name":"inst_1A672E62","path":"rooms/rm_jogo2/rm_jogo2.yy",},
-    {"name":"inst_40C01EC9","path":"rooms/rm_jogo2/rm_jogo2.yy",},
-    {"name":"inst_285AA5BF","path":"rooms/rm_jogo2/rm_jogo2.yy",},
-    {"name":"inst_2DC106A1","path":"rooms/rm_jogo2/rm_jogo2.yy",},
+    {"name":"inst_1A672E62","path":"rooms/rm_gameplay2/rm_gameplay2.yy",},
+    {"name":"inst_40C01EC9","path":"rooms/rm_gameplay2/rm_gameplay2.yy",},
+    {"name":"inst_285AA5BF","path":"rooms/rm_gameplay2/rm_gameplay2.yy",},
+    {"name":"inst_2DC106A1","path":"rooms/rm_gameplay2/rm_gameplay2.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -44,8 +44,9 @@
           57,1,123,-7,0,-23,-2147483648,1,101,-16,57,1,123,-55,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"ti_nuvens","path":"tilesets/ti_nuvens/ti_nuvens.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4291605626,"depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.3,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.3,"vtiled":true,"x":0,"y":0,},
+    {"$GMRTileLayer":"","%Name":"tl_cidade","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"tl_cidade","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":0,"SerialiseWidth":0,"TileSerialiseData":[],},"tilesetId":null,"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
   ],
-  "name":"rm_jogo2",
+  "name":"rm_gameplay2",
   "parent":{
     "name":"Rooms",
     "path":"folders/Rooms.yy",

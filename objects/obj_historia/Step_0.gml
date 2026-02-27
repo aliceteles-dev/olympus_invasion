@@ -1,2 +1,5 @@
 input_pular();
-pula_intro();
+pode_pular();
+muda_room();
+
+show_debug_message(global.room_goto)

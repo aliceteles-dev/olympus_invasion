@@ -1,7 +1,7 @@
 {
   "$GMRoom":"v1",
   "%Name":"rm_jogo1",
-  "creationCodeFile":"",
+  "creationCodeFile":"rooms/rm_jogo1/RoomCreationCode.gml",
   "inheritCode":false,
   "inheritCreationOrder":false,
   "inheritLayers":false,
@@ -16,6 +16,7 @@
     {"name":"inst_56F0B409","path":"rooms/rm_jogo1/rm_jogo1.yy",},
     {"name":"inst_4F3AE511","path":"rooms/rm_jogo1/rm_jogo1.yy",},
     {"name":"inst_2EFDF494","path":"rooms/rm_jogo1/rm_jogo1.yy",},
+    {"name":"inst_5BA449BF","path":"rooms/rm_jogo1/rm_jogo1.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -57,6 +58,9 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_obstaculo","path":"objects/obj_obstaculo/obj_obstaculo.yy",},"propertyId":{"name":"x_max","path":"objects/obj_obstaculo/obj_obstaculo.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"736",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_obstaculo","path":"objects/obj_obstaculo/obj_obstaculo.yy",},"propertyId":{"name":"obj","path":"objects/obj_obstaculo/obj_obstaculo.yy",},"resource":{"name":"obj_pedra","path":"objects/obj_pedra/obj_pedra.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"obj_pedra",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":24.0,"y":74.0,},
+        {"$GMRInstance":"v4","%Name":"inst_5BA449BF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5BA449BF","objectId":{"name":"obj_switchroom","path":"objects/obj_switchroom/obj_switchroom.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_switchroom","path":"objects/obj_switchroom/obj_switchroom.yy",},"propertyId":{"name":"destino","path":"objects/obj_switchroom/obj_switchroom.yy",},"resource":{"name":"rm_gameplay2","path":"rooms/rm_gameplay2/rm_gameplay2.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_gameplay2",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5.0,"y":82.0,},
       ],"layers":[],"name":"plataforma","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"tl_cidade","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"tl_cidade","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":12,"SerialiseWidth":132,"TileCompressedData":[
           -4,0,-128,-2147483648,-5,0,-31,-2147483648,-14,0,-82,-2147483648,-5,0,-31,-2147483648,-14,0,-44,-2147483648,
@@ -75,6 +79,7 @@
           37,1,73,-18,-2147483648,1,61,-19,37,1,73,-4,0,-6,-2147483648,1,61,-5,37,
         ],"TileDataFormat":1,},"tilesetId":{"name":"tl_cidade","path":"tilesets/tl_cidade/tl_cidade.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":30.0,"animationSpeedType":0,"colour":4281925631,"depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.3,"htiled":true,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.3,"vtiled":true,"x":0,"y":0,},
+    {"$GMRTileLayer":"","%Name":"tl_nuvens","depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"tl_nuvens","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":0,"SerialiseWidth":0,"TileSerialiseData":[],},"tilesetId":null,"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
   ],
   "name":"rm_jogo1",
   "parent":{

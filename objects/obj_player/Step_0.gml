@@ -6,8 +6,10 @@ movimento();
 pulando();
 //inicia_ataque();
 animacoes();
+//posso_mudar_level();
+//muda_room();
 
-
+show_debug_message(global.leave)
 
 if (keyboard_check_pressed(ord("F")) && !atacando)
 {

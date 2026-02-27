@@ -1,0 +1,1 @@
+//global.room_goto = rm_historia;

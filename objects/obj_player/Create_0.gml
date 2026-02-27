@@ -261,6 +261,14 @@ desenha_vida = function(_guiy = (-display_get_gui_height()) + display_get_gui_he
     _guix += 20; 
 }
 
+
+//posso_mudar_level = function()
+//{
+    //if (x >= room_width + 32)
+        //global.leave = true;
+//}
+
+
 #endregion
 
 
