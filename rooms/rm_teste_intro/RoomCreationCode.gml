@@ -1,1 +1,0 @@
-//global.room_goto = rm_jogo1;

@@ -1,6 +1,6 @@
 //criando array para os componentes do menu
 
-menu = ["Jogar", "Créditos", "Sair"]
+menu = ["Jogar", "Sair"]
 
 atual = 0;
 
@@ -51,12 +51,12 @@ ativa_menu = function()
 		break;
 	
 		//tutorial
-		case 1:
-            layer_sequence_create("transicao", room_width / 2, room_height / 2, sqn_transicao1);
-            global.leave = true;
-			global.room_goto = rm_creditos;
-
-		break;
+		//case 1:
+            //layer_sequence_create("transicao", room_width / 2, room_height / 2, sqn_transicao1);
+            //global.leave = true;
+			//global.room_goto = rm_creditos;
+//
+		//break;
 	
 		//idioma
 		//case 2:
@@ -65,7 +65,7 @@ ativa_menu = function()
 		//break;
 	
 		//sair
-		case 2:
+		case 1:
             layer_sequence_create("transicao", room_width / 2, room_height / 2, sqn_transicao1);
 			game_end();
 		

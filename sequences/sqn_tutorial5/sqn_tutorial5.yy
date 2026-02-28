@@ -1,6 +1,6 @@
 {
   "$GMSequence":"v1",
-  "%Name":"sqn_tutorial1",
+  "%Name":"sqn_tutorial5",
   "autoRecord":true,
   "backdropHeight":180,
   "backdropImageOpacity":0.5,
@@ -24,7 +24,7 @@
     "resourceType":"KeyframeStore<MomentsEventKeyframe>",
     "resourceVersion":"2.0",
   },
-  "name":"sqn_tutorial1",
+  "name":"sqn_tutorial5",
   "parent":{
     "name":"Tutorial",
     "path":"folders/Sequences/Tutorial.yy",
@@ -34,7 +34,7 @@
   "playbackSpeedType":0,
   "resourceType":"GMSequence",
   "resourceVersion":"2.0",
-  "seqHeight":31.669708,
+  "seqHeight":25.919708,
   "seqWidth":119.5,
   "showBackdrop":false,
   "showBackdropImage":false,
@@ -43,7 +43,7 @@
   "tracks":[
     {"$GMTextTrack":"","%Name":"fnt_contexto","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<AssetTextKeyframe>":"","Keyframes":[
           {"$Keyframe<AssetTextKeyframe>":"","Channels":{
-              "0":{"$AssetTextKeyframe":"v1","Alignment":1,"EnableEffects":false,"EnableGlow":false,"EnableOutline":false,"EnableShadow":false,"Id":{"name":"fnt_contexto","path":"fonts/fnt_contexto/fnt_contexto.yy",},"resourceType":"AssetTextKeyframe","resourceVersion":"2.0","Text":"A e D ou\r\n<- e -> para mover","Wrap":false,},
+              "0":{"$AssetTextKeyframe":"v1","Alignment":1,"EnableEffects":false,"EnableGlow":false,"EnableOutline":false,"EnableShadow":false,"Id":{"name":"fnt_contexto","path":"fonts/fnt_contexto/fnt_contexto.yy",},"resourceType":"AssetTextKeyframe","resourceVersion":"2.0","Text":"Dê um salto de fé","Wrap":false,},
             },"Disabled":false,"id":"cc7c6d14-d1ed-4a3d-aba6-1a56507438e9","IsCreationKey":false,"Key":0.0,"Length":60.0,"resourceType":"Keyframe<AssetTextKeyframe>","resourceVersion":"2.0","Stretch":false,},
         ],"resourceType":"KeyframeStore<AssetTextKeyframe>","resourceVersion":"2.0",},"modifiers":[
         {"$LockedModifier":"","resourceType":"LockedModifier","resourceVersion":"2.0",},

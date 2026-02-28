@@ -20,6 +20,9 @@ timer_apagar = 0;
 xx = display_get_gui_width() / 2;
 yy = display_get_gui_height() - 80;
 
+//porque só quero criar o hades uma vez:
+controle_hades = false;
+
 inicia_historia = function()
 {
     timer_escrever++
@@ -148,8 +151,9 @@ escrevendo_texto = function()
         
         case 5:
             timer_escrever++;
+          //  controle_hades = true;
             
-            if (timer_escrever >= tempo_texto * 8)
+            if (timer_escrever >= tempo_texto * 7)
             {
                 timer_escrever = 0;
                 estado = 6;
@@ -163,12 +167,17 @@ escrevendo_texto = function()
         
         case 6:
             timer_escrever++;
-            
+            controle_hades = true;
             if (timer_escrever >= tempo_texto * 3)
             {
                 timer_escrever = 0;
                 estado = 7;
                 indice_texto += 1;
+            }
+            else if (timer_escrever == tempo_texto and controle_hades)
+            {
+                instance_create_layer(186, 126, "Instances", obj_hades);
+                controle_hades = false
             }
             else if (timer_escrever >= tempo_texto)
             {
