@@ -3,6 +3,7 @@
 //show_debug_message("Chamando transicao na room: " + room_get_name(room));
 //muda_room();
 //transicao();
+
 if (!global.transicao_ativa)
 {
     if (instance_exists(obj_player))

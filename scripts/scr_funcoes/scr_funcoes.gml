@@ -9,7 +9,6 @@
 
 
 
-global.transicao = false;
 
 global.debug = false;
 
@@ -21,7 +20,7 @@ global.leave = false;
 
 
 //lidando com o bug da room 
-global.transicao_ativa = false;
+global.transicao = false;
 global.proxima_room = noone;
 
 function transicao()

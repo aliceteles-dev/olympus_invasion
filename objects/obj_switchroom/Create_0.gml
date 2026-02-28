@@ -1,5 +1,9 @@
 
 
+
+
+show_debug_message("Destino dessa instância: " + room_get_name(destino));
+
 pode_mudar_room = function()
 {
     if instance_exists(obj_player)

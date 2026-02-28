@@ -221,7 +221,6 @@ perde_vida = function()
 }
 
 
-
 lutar = function()
 {
    if (atacando)
