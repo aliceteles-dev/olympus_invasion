@@ -12,7 +12,7 @@ LISTA DE TAREFAS
 > - FEITO ajustar a velocidade e altura do pulo do player
 > - FEITO não deixar o player sair da room pelo x
 > fazer ele tomar dano e voltar a um checkpoint se cair em um buraco
-> colocar o meme de confia do will smith no ultimo pulo do level 1
+
 
 
 Arte:
