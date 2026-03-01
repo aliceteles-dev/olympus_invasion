@@ -7,6 +7,10 @@ keyboard_set_map(vk_up, vk_space);
 #region Variáveis 
 vida = 3;
 
+//efeitos sonoros:
+
+//som_dano = pra surpresa de ninguém, isso não funcionaria 
+
 //invencibilidade do player após tomar dano
 tempo_inv = game_get_speed(gamespeed_fps);
 timer_inv = 2;
@@ -156,6 +160,8 @@ movimento = function()
 //sera que se eu usar a bbox_bottom do player mais top da plataforma isso faria a plataforma funcionar melhor
 pulando = function()
 {
+    var _pitch = random_range(1.2, 1.5);
+    
     if (estou_no_chao and pular and !pulei)
     {
         //velv -= pular * max_velv;
@@ -163,6 +169,7 @@ pulando = function()
         //pulei = false;
         velv -= max_velv;
         pulei = true;
+        audio_play_sound(sfx_pulo, 5, false, 1, , _pitch);
     }
 
     if (!pular)
@@ -207,10 +214,12 @@ perde_vida = function()
 	if (vida > 1)
 	{
 		vida--;	
+        audio_play_sound(sfx_dano, 5, false, 1, , 1);
         timer_inv = tempo_inv;
     }
     else
     {
+        audio_play_sound(sfx_dano, 5, false, 1, , 1);
         global.transicao_ativa = true;
         room_restart()
         global.proxima_room = obj_switchroom.destino;
@@ -241,6 +250,7 @@ lutar = function()
         //substitui x+10 por _local_de_saidaa
         var _particula = instance_create_layer(_local_de_saida, y - 15, "golpe", obj_golpe_player);
         _particula.hspeed = 2 * direcao;
+        audio_play_sound(sfx_soco, 5, false, , 0.28);
         
         atacando = false;
         //problema aqui, fica feio quando ele golpeia pra esquerda

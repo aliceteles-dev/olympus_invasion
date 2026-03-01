@@ -1,10 +1,10 @@
 {
   "$GMSprite":"v2",
   "%Name":"spr_espinhos",
-  "bboxMode":0,
+  "bboxMode":2,
   "bbox_bottom":7,
-  "bbox_left":0,
-  "bbox_right":14,
+  "bbox_left":4,
+  "bbox_right":12,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,

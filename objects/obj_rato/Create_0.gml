@@ -87,6 +87,7 @@ atacando = function()
         
         hspeed = 0;
         sprite_index = spr_rato_ataque;
+        audio_play_sound(sfx_rato, 5, false);
         
     }
         

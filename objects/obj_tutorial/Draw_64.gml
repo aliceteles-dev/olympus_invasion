@@ -1,1 +1,0 @@
-draw_text(gui_x, gui_y, "texto")

@@ -177,6 +177,7 @@ escrevendo_texto = function()
             else if (timer_escrever == tempo_texto and controle_hades)
             {
                 instance_create_layer(186, 126, "Instances", obj_hades);
+                audio_play_sound(sfx_hades, 5, false);
                 controle_hades = false
             }
             else if (timer_escrever >= tempo_texto)

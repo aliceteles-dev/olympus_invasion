@@ -1,3 +1,6 @@
+//n]ao quero que o plaer saia pela esquerda da room
+x = clamp(x, 0, room_width + 200);
+
 inputs_player();
 
 estou_na_plataforma();

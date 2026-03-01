@@ -14,12 +14,14 @@ controla_menu = function()
 	{
 		atual += 1;	
 		margem = 0;
+        audio_play_sound(sfx_menu, 5, false);
 	}
 
 	if (keyboard_check_pressed(vk_up))
 	{
 		atual--;	
 		margem = 0;
+        audio_play_sound(sfx_menu, 5, false);
 	}
 
 	//show_debug_message(atual);
@@ -44,6 +46,7 @@ ativa_menu = function()
 	{
 		//jogar
 		case 0:
+            audio_play_sound(sfx_select_menu, 5, false);
             layer_sequence_create("transicao", room_width / 2, room_height / 2, sqn_transicao1);
             global.leave = true;
 			global.proxima_room = rm_historia;
@@ -66,6 +69,7 @@ ativa_menu = function()
 	
 		//sair
 		case 1:
+            audio_play_sound(sfx_select_menu, 5, false);
             layer_sequence_create("transicao", room_width / 2, room_height / 2, sqn_transicao1);
 			game_end();
 		
@@ -76,7 +80,7 @@ ativa_menu = function()
 
 draw_menu = function()
 {
-	var _altura = display_get_gui_height() / 2.25;
+	var _altura = display_get_gui_height() / 2;
 
 
 	//alinhando

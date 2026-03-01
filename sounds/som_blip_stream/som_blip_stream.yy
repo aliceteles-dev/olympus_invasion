@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"som_blip_stream",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":284.8653,
+  "exportDir":"",
+  "name":"som_blip_stream",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"som_blip_stream.mp3",
+  "volume":0.2,
+}

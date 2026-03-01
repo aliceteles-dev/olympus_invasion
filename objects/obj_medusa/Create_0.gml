@@ -87,6 +87,7 @@ atacando = function()
         
         hspeed = 0;
         sprite_index = spr_medusa_attack;
+        audio_play_sound(sfx_medusa, 4, false);
         
     }
         
