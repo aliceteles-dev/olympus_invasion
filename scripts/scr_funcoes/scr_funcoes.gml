@@ -50,6 +50,23 @@ function transicao2()
 
 }
 
+//objetivo: travar os movimentos do player quando as transições das rooms 1 e 3 estiverem acontecendo
+global.bloqueia_player = false;
+
+function travei_o_player()
+{
+    global.bloqueia_player = true;
+}
+
+function destravei_o_player()
+{
+    global.bloqueia_player = false;
+}
+
+
+
+
+
 function muda_room()
 {
 

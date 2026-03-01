@@ -140,10 +140,10 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_inicio","path":"rooms/rm_inicio/rm_inicio.yy",},},
+    {"roomId":{"name":"rm_jogo3","path":"rooms/rm_jogo3/rm_jogo3.yy",},},
     {"roomId":{"name":"rm_final","path":"rooms/rm_final/rm_final.yy",},},
     {"roomId":{"name":"rm_jogo4","path":"rooms/rm_jogo4/rm_jogo4.yy",},},
     {"roomId":{"name":"rm_historia","path":"rooms/rm_historia/rm_historia.yy",},},
-    {"roomId":{"name":"rm_jogo3","path":"rooms/rm_jogo3/rm_jogo3.yy",},},
     {"roomId":{"name":"rm_jogo2","path":"rooms/rm_jogo2/rm_jogo2.yy",},},
     {"roomId":{"name":"rm_jogo1","path":"rooms/rm_jogo1/rm_jogo1.yy",},},
   ],

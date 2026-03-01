@@ -1,7 +1,7 @@
 //mapeamento dos botões
 keyboard_set_map(ord("A"), vk_left);
 keyboard_set_map(ord("D"), vk_right);
-keyboard_set_map(vk_up, vk_space);
+//keyboard_set_map(vk_up, vk_space);
 
 
 #region Variáveis 
@@ -104,57 +104,51 @@ inputs_player = function()
 
 movimento = function()
 {
-    timer_inv--; 
-    
-    //lo´gica do movimento horizontal
-    velh = (direita - esquerda) * max_velh;
-    
-    //aplicando essa lógica e cuidando da colisão
-    move_and_collide(velh, 0, solidos, 24);
-    
-    //movimento do eixo y
-    move_and_collide(0, velv, solidos, 24);
-    
-    //x = round(x);
-    
-    //também quero que o player colida com a plataforma móvel
-    //move_and_collide(0, 0, obj_plataforma_movel, 12);
-    //checando_se_pulei();
-   
-    
-    
-     if (place_meeting(x, y + velv, solidos))
+    if (!global.bloqueia_player)
     {
-        while (!place_meeting(x, y + sign(velv), solidos))
-        {
-            y += sign(velv);
-        }
-    
-        if (velv > 0)  // só quando está caindo
-        {
-            velv = 0;
-        }
-}
-    
-    if (!estou_no_chao)
-    {
-        velv += g;
-        //pulei = true;
+         timer_inv--; 
+         
+         //lo´gica do movimento horizontal
+         velh = (direita - esquerda) * max_velh;
+         
+         //aplicando essa lógica e cuidando da colisão
+         move_and_collide(velh, 0, solidos, 24);
+         
+         //movimento do eixo y
+         move_and_collide(0, velv, solidos, 24);
+         
+         //x = round(x);
+         
+         //também quero que o player colida com a plataforma móvel
+         //move_and_collide(0, 0, obj_plataforma_movel, 12);
+         //checando_se_pulei();
+         
+         
+         if (place_meeting(x, y + velv, solidos))
+         {
+             while (!place_meeting(x, y + sign(velv), solidos))
+         {
+             y += sign(velv);
+         }
+         
+         if (velv > 0)  // só quando está caindo
+         {
+             velv = 0;
+         }
+         }
+         
+         if (!estou_no_chao)
+         {
+             velv += g;
+             //pulei = true;
+         }
+         
+         
+         y = clamp(y, 0 + sprite_height, room_height + 100);
+        
+        
+        
     }
-    
-    
-    y = clamp(y, 0 + sprite_height, room_height + 100);
-    //else if (estou_no_chao)
-    //{
-        //velv = 0;
-    //}
-
-     //pulei = false;
-    //if (estou_na_plat_movel)
-    //{
-        //velv = 0;
-        //velv -= pular * max_velv;	
-    //}
 }
 
 //sera que se eu usar a bbox_bottom do player mais top da plataforma isso faria a plataforma funcionar melhor
@@ -162,20 +156,24 @@ pulando = function()
 {
     var _pitch = random_range(1.2, 1.5);
     
-    if (estou_no_chao and pular and !pulei)
+    if (!global.bloqueia_player)
     {
-        //velv -= pular * max_velv;
-       // y = round(y);
-        //pulei = false;
-        velv -= max_velv;
-        pulei = true;
-        audio_play_sound(sfx_pulo, 5, false, 1, , _pitch);
+        if (estou_no_chao and pular and !pulei)
+        {
+            //velv -= pular * max_velv;
+           // y = round(y);
+            //pulei = false;
+            velv -= max_velv;
+            pulei = true;
+            audio_play_sound(sfx_pulo, 5, false, 1, , _pitch);
+        }
+    
+        if (!pular)
+        {
+            pulei = false;
+        }
     }
 
-    if (!pular)
-    {
-        pulei = false;
-    }
     
 }
 
@@ -232,7 +230,7 @@ perde_vida = function()
 
 lutar = function()
 {
-   if (atacando)
+   if (atacando and !global.bloqueia_player)
     {
 
         var _local_de_saida = 0

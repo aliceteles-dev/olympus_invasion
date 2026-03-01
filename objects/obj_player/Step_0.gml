@@ -1,5 +1,5 @@
 //n]ao quero que o plaer saia pela esquerda da room
-x = clamp(x, 0, room_width + 200);
+x = clamp(x, 0 + sprite_width / 2, room_width + 200);
 
 inputs_player();
 
@@ -55,3 +55,7 @@ if (keyboard_check_pressed(ord("R")))
         
     layer_sequence_create("transicao", x, y, sqn_transicao1);
 }
+
+
+
+//show_debug_message(global.bloqueia_player);
